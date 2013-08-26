@@ -1,7 +1,7 @@
 //>>excludeStart("webkitMobile", kwArgs.webkitMobile);
 (function(){
 
-/*
+/*.
 	dojo.query() architectural overview:
 
 		dojo.query is a relatively full-featured CSS3 query library. It is
