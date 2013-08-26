@@ -512,7 +512,7 @@ var defineQuery= function(d){
 	var getNodeIndex = function(node){
 		var root = node.parentNode;
 		var i = 0,
-			tret = root[childNodesName],
+			tret = root.children || root.childNodes,
 			ci = (node["_i"]||-1),
 			cl = (root["_l"]||-1);
 
@@ -793,7 +793,7 @@ var defineQuery= function(d){
 		filterFunc = filterFunc||yesman;
 		return function(root, ret, bag){
 			// get an array of child elements, skipping text and comment nodes
-			var te, x = 0, tret = root[childNodesName];
+			var te, x = 0, tret = root.children || root.childNodes;
 			while(te = tret[x++]){
 				if(
 					_simpleNodeTest(te) &&
